@@ -10,7 +10,7 @@ def casino():
     balance = input('Какую сумму будем депать? ')
     print('____________________________')
 
-    # print(list_symbol)
+    # print(list_symbol))))))
 
     if balance.isalpha():
         print('Ввод только чисел!')
