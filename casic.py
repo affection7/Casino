@@ -1,4 +1,3 @@
-from typing import List
 import random
 
 def casino():
@@ -10,8 +9,6 @@ def casino():
     balance = input('Какую сумму будем депать? ')
     print('_____________________________')
 
-    # print(list_symbol)
-
     if balance.isalpha():
         print('Ввод только чисел!')
     elif int(balance) < 0:
@@ -19,7 +16,7 @@ def casino():
     else:
         curr_balance = int(balance)
         print(f'Ваш депозит: {balance} рублей')
-        print('Для входа в игру введите «Play»')
+        print('Для входа в игру введите "Play"')
 
     if input().lower() == 'play':
         while curr_balance > 0:
@@ -45,8 +42,8 @@ def casino():
                 print(f'Финальный баланс: {curr_balance}р.')
                 break
 
-def check_win(array: List, bet: int, balance: int) -> int:
-    if array[0] == array[1] == array[2] == array[4]:
+def check_win(array: list, bet: int, balance: int) -> int:
+    if array[0] == array[1] == array[2] == array[3]:
         win = bet * 5
         new_balance = balance + win
         print(f'Бинго!!! (+{win}р.)')
@@ -64,4 +61,5 @@ def check_win(array: List, bet: int, balance: int) -> int:
         print("Мимо!")
         print(f"Ваш баланс: {new_balance}р. (-{bet}р.)")
         return new_balance
+
 casino()
